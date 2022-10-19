@@ -11,7 +11,7 @@ function createWindow() {
     },
   });
 
-  win.loadURL("https://www.github.com/amlanpatra");
+  win.loadFile("index.html");
 }
 
 app.whenReady().then(createWindow);

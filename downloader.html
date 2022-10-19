@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Your file will start downloading automatically : </h1>
+
+    <br />
+    if not please click respected link :
+    Download for
+    <button id="Windows">windows</button>
+    <button id="Linux">
+        <a href="https://github.com/amlanpatra/testapp/releases/download/Clients/linux-unpacked.zip" target="_blank">
+            linux </a>
+    </button>
+
+    <button id="MacOS">macos</button>
+
+    <script>
+        function getOS() {
+            var OperSysName = null;
+            if (navigator.appVersion.indexOf("Win") != -1) OperSysName = "Windows";
+            if (navigator.appVersion.indexOf("Mac") != -1) OperSysName = "MacOS";
+            if (navigator.appVersion.indexOf("X11") != -1) OperSysName = "UNIX";
+            if (navigator.appVersion.indexOf("Linux") != -1) OperSysName = "Linux";
+            return OperSysName;
+        }
+
+
+
+        document.getElementById("Windows").onclick = () => alert("windows clicked");
+        document.getElementById("Linux").onclick = () => alert("Linux clicked");
+        document.getElementById("MacOS").onclick = () => alert("MacOS clicked");
+
+
+        // alert(navigator.appVersion);
+        var clientOs = getOS();
+        alert(`auto detected client OS : ${clientOs}`);
+
+
+        document.getElementById(clientOs).click();
+    </script>
+
+</body>
+
+
+
+</html>

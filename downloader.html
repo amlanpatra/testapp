@@ -29,7 +29,8 @@
     <button id="MacOS">
         <a href="https://github.com/amlanpatra/testapp/releases/download/shardingsTestApp/shardingsapp-1.0.0.dmg"
             target="_blank">
-            macos</a></button>
+            macOS</a>
+    </button>
 
     <script>
         function getOS() {
@@ -43,21 +44,20 @@
 
 
 
-        document.getElementById("Windows").onclick = () => alert("windows clicked");
-        document.getElementById("Linux").onclick = () => alert("Linux clicked");
-        document.getElementById("MacOS").onclick = () => alert("MacOS clicked");
+        document.getElementById("Windows").onclick = () => console.log("windows clicked");
+        document.getElementById("Linux").onclick = () => console.log("Linux clicked");
+        document.getElementById("MacOS").onclick = () => console.log("MacOS clicked");
 
 
         // alert(navigator.appVersion);
         var clientOs = getOS();
-        alert(`auto detected client OS : ${clientOs}`);
+        console.log(`auto detected client OS : ${clientOs}`);
 
-
+        // setTimeout(() => {
         document.getElementById(clientOs).click();
+        // }, 5000);
     </script>
 
 </body>
-
-
 
 </html>
